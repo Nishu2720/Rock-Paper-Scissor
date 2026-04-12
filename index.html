@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor Game</title>
+    <meta name="description" content="A premium Rock Paper Scissors game with modern UI/UX, glassmorphism, and smooth animations.">
+    <title>Rock Paper Scissors - Premium Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Rock Paper Scissor</h1>
+    <div class="app-container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
 
-    <div class="choices">
-     <div class="choice" id="rock">
-      <img src="rock.png">
-      </div>
+        <main>
+            <div class="choices">
+                <div class="choice" id="rock" title="Rock">
+                    <img src="rock.png" alt="Rock">
+                </div>
 
-      <div class="choice" id="scissor">
-        <img src="scissors.png">
-        </div>
+                <div class="choice" id="paper" title="Paper">
+                    <img src="paper.png" alt="Paper">
+                </div>
 
-        <div class="choice" id="paper">
-            <img src="paper.png">
+                <div class="choice" id="scissors" title="Scissors">
+                    <img src="scissors.png" alt="Scissors">
+                </div>
             </div>
-    </div>
 
-    <div class="score">
-        <div class="you">
-     <p id="user-score">0</p>
-     <p>You</p>
-        </div>
+            <div class="score-board">
+                <div class="score-card you">
+                    <span class="label">You</span>
+                    <span id="user-score">0</span>
+                </div>
+                <div class="score-divider">:</div>
+                <div class="score-card comp">
+                    <span class="label">Comp</span>
+                    <span id="comp-score">0</span>
+                </div>
+            </div>
 
-        <div class="comp">
-            <p id="comp-score">0</p>
-            <p>Comp</p>
-        </div>
+            <div class="msg-container">
+                <p id="msg">Play your move to start!</p>
+            </div>
+            
+            <button id="reset-btn">Reset Game</button>
+        </main>
     </div>
-        <div class="msg-container">
-            <p id="msg">play your move</p>
-        </div>
     <script src="app.js"></script>
 </body>
 </html>
